@@ -15,17 +15,55 @@
                   50%  { left:200px; top:200px;}
                   75%  { left:0px; top:200px;}
                   100% { left:0px; top:0px;}
+
+                <!-- Add a background image --> 
+
                 }
+
+    .roundedStartButton {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+
+      border-radius: 12px;
+    }
+
+                
                 </style>
     
 
 
 
 </head>
-  <body>
-      <div>
+  <body id="dino-container">
+      <div >
             <img src="https://pluspng.com/img-png/t-rex-png-hd-t-rex-2-png-915.png" alt="t rex" width="75" height="50">
       </div>
+      <button class="roundedStartButton">*Start!*</button>
+
+
+      <script>
+        
+        counter = 0;
+
+         const container = document.querySelector('#dino-container')
+
+        container.onclick = function(event) {
+
+          counter = counter + 1;
+          if (counter == 5){
+            alert('Your turn is over! Play again.') 
+          } 
+
+        }
+      </script>
     
  </body>
 </html>
